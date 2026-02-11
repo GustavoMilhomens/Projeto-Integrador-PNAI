@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto PNAE- IFTO</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        .container { max-width: 400px; margin: auto; padding: 20px; border-radius: 8px; margin-top: 250px;}
+        input { width: 100%; margin-bottom: 10px; padding: 8px; box-sizing: border-box; }
+        img { width: 300px; margin: auto; display: block; }
+        button { width: 100%; padding: 10px; background-color: #217346; color: white; border: 5px solid #005000; border-radius: 4px; cursor: pointer; margin: 5px 0;}
+        button:hover { background-color: #1a5a37; }
+    </style>
+</head>
+<body>
+    <form class="container" action="pag_inicial.html" method="get">
+        <img src="pnae_old_lg.png" alt="Logo do PNAE"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" placeholder=" Digite seu email..."><br>
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" placeholder=" Digite sua senha..."><br>
+        <button type="submit" onclick="entrar()" >Entrar</button><br> <!--Colocar ação de entrar na página de login-->
+    </form>
+
+    <script>
+        function entrar() {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            if (email === "teste@gmail.com" && senha === "teste123") {
+                console.log('ok')
+                // alert("Login bem-sucedido!");
+            } else {
+                alert("Email ou senha incorretos.");
+            }
+        }
+    </script>
+</body>
+</html>
